@@ -7,12 +7,12 @@
 
 <p>
   <strong>Description:</strong>
-  <%= @director.description %>
+  <%= @director.description.truncate(20) %>
 </p>
 
 <p>
   <strong>Dob:</strong>
-  <%= @director.dob %>
+  <%= @director.dob.strftime("%A, %B %e, %Y") %>
 </p>
 
 <%= link_to 'Edit', edit_director_path(@director) %> |

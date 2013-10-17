@@ -7,12 +7,12 @@
 
 <p>
   <strong>Description:</strong>
-  <%= @movie.description %>
+  <%= @movie.description.truncate(20) %>
 </p>
 
 <p>
   <strong>Release date:</strong>
-  <%= @movie.release_date %>
+  <%= @movie.release_date.strftime("%A, %B %e, %Y") %>
 </p>
 
 <p>
