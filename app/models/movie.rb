@@ -8,4 +8,8 @@ class Movie < ActiveRecord::Base
   validates :length, numericality: { less_than: 300 }
   validates :rating, inclusion: { in: RATINGS }
   # validates :release_date
+
+  def days_until_release
+    (self.release_date - Date.current).to_i
+  end
 end
